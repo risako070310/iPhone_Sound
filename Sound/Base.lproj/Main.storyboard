@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,30 +12,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sound" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTv-ex-0GJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="101" width="390" height="214"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="drumImage" title=""/>
                                 <connections>
-                                    <action selector="touchDownDrumButton" destination="BYZ-38-t0r" eventType="touchDown" id="FX7-dk-6jw"/>
+                                    <action selector="touchDownDrumButton" destination="BYZ-38-t0r" eventType="touchDown" id="BD3-tr-c6q"/>
                                     <action selector="touchUpDrumButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="on1-vK-saV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLG-CE-47I">
+                                <rect key="frame" x="0.0" y="315" width="390" height="214"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pianoImage"/>
+                                <connections>
+                                    <action selector="touchDownPianoButton" destination="BYZ-38-t0r" eventType="touchDown" id="hLU-hg-mVS"/>
+                                    <action selector="touchUpPianoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFT-cu-aJf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-7B-mn6">
+                                <rect key="frame" x="0.0" y="529" width="390" height="281"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="guitarImage"/>
+                                <connections>
+                                    <action selector="touchDownGuitarButton" destination="BYZ-38-t0r" eventType="touchDown" id="v4F-X9-Hl0"/>
+                                    <action selector="touchUpGuitarButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZS-0m-swb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iTv-ex-0GJ" secondAttribute="bottom" id="9pX-gJ-ScG"/>
-                            <constraint firstItem="iTv-ex-0GJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LLe-dg-CTT"/>
+                            <constraint firstItem="TLG-CE-47I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Un-iP-tUp"/>
+                            <constraint firstItem="TLG-CE-47I" firstAttribute="top" secondItem="iTv-ex-0GJ" secondAttribute="bottom" id="B9W-F5-mHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TLG-CE-47I" secondAttribute="trailing" id="FjW-Dt-TpK"/>
+                            <constraint firstItem="NLg-7B-mn6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e1g-fZ-1cE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NLg-7B-mn6" secondAttribute="trailing" id="lbj-25-MeI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NLg-7B-mn6" secondAttribute="bottom" id="pE6-2S-Jvk"/>
+                            <constraint firstItem="TLG-CE-47I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qul-ST-5bf"/>
+                            <constraint firstItem="NLg-7B-mn6" firstAttribute="top" secondItem="TLG-CE-47I" secondAttribute="bottom" id="tVN-7P-UJQ"/>
                             <constraint firstItem="iTv-ex-0GJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u2C-h5-clD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTv-ex-0GJ" secondAttribute="trailing" id="vRa-Eo-Rjd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="drumButton" destination="iTv-ex-0GJ" id="5jy-nh-fTn"/>
+                        <outlet property="guitarButton" destination="NLg-7B-mn6" id="HwF-r2-ePf"/>
+                        <outlet property="pianoButton" destination="TLG-CE-47I" id="bqu-fv-rE9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -45,5 +71,7 @@
     </scenes>
     <resources>
         <image name="drumImage" width="200" height="200"/>
+        <image name="guitarImage" width="200" height="200"/>
+        <image name="pianoImage" width="200" height="200"/>
     </resources>
 </document>
