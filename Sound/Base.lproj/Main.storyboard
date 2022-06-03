@@ -19,6 +19,9 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="drumImage" title=""/>
+                                <connections>
+                                    <action selector="tapDrumButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qy6-DH-kK5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
